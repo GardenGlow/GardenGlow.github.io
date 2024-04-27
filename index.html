@@ -62,6 +62,10 @@ body, html {
 #specialize {
   font-size: 20pt;
 }
+.listOfJobs li {
+  padding: 20px;
+  padding-left: 40px;
+}
 .contentDiv {
   position: absolute;
     top: 200%;
@@ -158,24 +162,21 @@ label {
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p style="font-size: 18px;">Welcome to Garden Glow Landscaping, My name is adeeb georges and i love lanscaping, unfortunatly my backyard only has so much space for me to landscap. 
-        So i decided to make a business, I don't care for the money I just love dirt, its colour, its texture, its smell, everything about it makes me quiver.</p>
+      <p style="font-size: 18px;">Welcome to GardenGlow Landscaping. We are here to provide the residents of Calgary with all their needs to the highest standard of quality.
+         Our team at GardenGlow Landscaping puts your needs first to ensure the highest satisfaction to all of our clients.</p>
     </div>
   </div>
-
-  
   <p id="specialize" class="w3-center w3-padding-16" style='font-size: 30px'>WHAT WE DO:</p>
-  <p class="w3-wide w3-dark-grey" ><li style='font-size: 26px'>Landscape design</li></p>
-  <div class="">
-    <div class="w3-container w3-padding-small  w3-center" style='font-size: 20px'>Give us your vision and we'll together to turn it into reality.</div>
-  </div>
-  <p class="w3-wide w3-dark-grey"><li style='font-size: 26px'>Installation</li></p>
-  <div class="">
-    <div class="w3-container w3-padding-small w3-center" style='font-size: 20px'>Outline the steps involved in implementing landscape designs, including site preparation, planting, and hardscaping.</div>
-  </div>
-  <p class="w3-wide w3-dark-grey"><li style='font-size: 26px'>Maintenance</li></p>
-  <div class="">
-    <div class="w3-container w3-padding-small w3-center" style='font-size: 20px'>Detail ongoing maintenance services such as lawn care, pruning, and seasonal cleanups.</div>
+  <div class="listOfJobs" style="display: grid; grid-template-columns: 33% 33% 33%; grid-template-rows: 33% 33% 33%;">
+    <li style='font-size: 26px; grid-column: 1; grid-row: 1; white-space: nowrap;'>Tree & shrub planting</li>
+    <li style='font-size: 26px; grid-column: 2; grid-row: 1; white-space: nowrap;'>Tree & shrub removal</li>
+    <li style='font-size: 26px; grid-column: 3; grid-row: 1; white-space: nowrap;'>Mowing, Edging & power raking</li>
+    <li style='font-size: 26px; grid-column: 1; grid-row: 2; white-space: nowrap;'>Fence restoration</li>
+    <li style='font-size: 26px; grid-column: 2; grid-row: 2; white-space: nowrap;'>Pressure washing</li>
+    <li style='font-size: 26px; grid-column: 3; grid-row: 2; white-space: nowrap;'>Decorative rocks & Mulch</li>
+    <li style='font-size: 26px; grid-column: 1; grid-row: 3; white-space: nowrap;'>Gutter Cleaning</li>
+    <li style='font-size: 26px; grid-column: 2; grid-row: 3; white-space: nowrap;'>Flower beds</li>
+    <li style='font-size: 26px; grid-column: 3; grid-row: 3; white-space: nowrap;'>Excavation</li>
   </div>
 </div>
 <br/><br/><br/>
@@ -187,11 +188,8 @@ label {
   </div>
 </div>
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section" id="flexItems">
-    <span class="w3-xlarge">14+</span><br>
-    Partners
-  </div>
+<div class="w3-center w3-dark-grey w3-padding-16" style="display:grid; grid-template-columns: 33% 33% 33%; justify-items: center;">
+  
   <div class="w3-quarter w3-section" id="flexItems">
     <span class="w3-xlarge">55+</span><br>
     Projects Done
