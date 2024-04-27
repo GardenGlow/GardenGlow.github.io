@@ -16,12 +16,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body,h1,h2,h3,h4,h5,h6,p,li,div {font-family: "Lato", sans-serif; color: black;}
 body, html {
   height: 100%;
   color: #777;
   line-height: 1.8;
   scroll-behavior: smooth;
+  
+}
+#flexItems {
+  color:white;
 }
 .myNavbar {
     background-color: rgba(251, 251, 251, 0.41);
@@ -58,21 +62,41 @@ body, html {
 #specialize {
   font-size: 20pt;
 }
-.down {
-    border: solid #202f36;
-    border-width: 0 3px 3px 0;
-    border-radius: 0%;
-    bottom: 0;
-    margin-bottom: 40px;
-    margin-left:47%;
-    margin-right:50%;
-    display: inline-flex;
-    align-items: center;
-    padding: 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    animation: bob 2s ease-in-out infinite alternate;
-    transition: transform 0.3s;
+.contentDiv {
+  position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes bouncing {
+  0% {bottom: 0;}
+  50% {bottom: 20px;}
+  100% {bottom: 0;}
+}
+
+.arrow {
+  animation: bouncing 2s infinite ease-in-out;
+  bottom: 80;
+  display: block;
+  height: 20px;
+  left: 50%;
+  margin-left: -15px;
+  position: absolute;
+  width: 20px;
+}
+.FormFields {
+  display: grid;
+  grid-template-columns: 50% 2% 50%;
+}
+.FormFields label {
+  text-align: right;
+}
+.FormFields input, .FormFields textarea {
+  grid-column: 3;
+}
+label {
+  font-size: 18px;
 }
 
 /* Turn off parallax scrolling for tablets and phones */
@@ -110,9 +134,10 @@ body, html {
 <div class="bgimg-1 w3-display-container" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
     <span class="MainLogo"><img src="../sources/Images/Logo_Image_Upscaled_RemovedBackground.png" height="200px" width="238px"></span>
-  <p><a class="down"></a></p>
-</div>
-  
+    <div class="contentDiv">
+      <img class="arrow" src="/sources/Images/arrow-234.png" />
+    </div>
+  </div>
 </div>
 
 <!-- Container (About Section) -->
@@ -153,6 +178,7 @@ body, html {
     <div class="w3-container w3-padding-small w3-center" style='font-size: 20px'>Detail ongoing maintenance services such as lawn care, pruning, and seasonal cleanups.</div>
   </div>
 </div>
+<br/><br/><br/>
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
@@ -162,19 +188,19 @@ body, html {
 </div>
 
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
+  <div class="w3-quarter w3-section" id="flexItems">
     <span class="w3-xlarge">14+</span><br>
     Partners
   </div>
-  <div class="w3-quarter w3-section">
+  <div class="w3-quarter w3-section" id="flexItems">
     <span class="w3-xlarge">55+</span><br>
     Projects Done
   </div>
-  <div class="w3-quarter w3-section">
+  <div class="w3-quarter w3-section" id="flexItems">
     <span class="w3-xlarge">89+</span><br>
     Happy Clients
   </div>
-  <div class="w3-quarter w3-section">
+  <div class="w3-quarter w3-section" id="flexItems">
     <span class="w3-xlarge">150+</span><br>
     Free Quotes Given
   </div>
@@ -223,7 +249,7 @@ body, html {
   </div>
   
 </div>
-
+<br/><br/>
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
@@ -234,7 +260,7 @@ body, html {
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min" id="contact">
+<div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT US</span>
   </div>
@@ -242,11 +268,46 @@ body, html {
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">GET IN TOUCH</h3>
-  <p class="w3-center"><em>Tell us what work you need to have done and we'll get in contact with you as soon as possible!</em></p>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqgq7ExvVKkUaWbeQ89uxQjkFg4O-6opT6N7QKz3T7fAVd0g/viewform?embedded=true" width="900" height="600" frameborder="0" marginheight="0" marginwidth="0" style="justify-self:center">Loading…</iframe>  
+  <h2 class="w3-center">GET IN TOUCH</h2>
+  <p class="w3-center" style="font-size: 20px;"><em>Tell us what work you need to have done and we'll get in contact with you as soon as possible!</em></p>
+  <br/>
+  <script type="text/javascript">var submitted=false</script>
+  <iframe name="hiddenConfirm" id="hiddenConfirm" style="display:none;" onload="if(submitted){window.location='submition.html';}"></iframe>
+  <form action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSdqgq7ExvVKkUaWbeQ89uxQjkFg4O-6opT6N7QKz3T7fAVd0g/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true" style="display:grid">
+    <div class="FormFields">
+      <label>Full Name</label>
+      <input type="text" name="entry.1289879338" required placeholder="Full Name" />
+    </div>
+    <br/>
+    <div class="FormFields">
+      <label>Email</label>
+      <input type="text" name="entry.1195677273" required placeholder="Email" />
+    </div>
+    <br/>
+    <div class="FormFields">
+      <label>Phone Number</label>
+      <input type="text" name="entry.731510122" required placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}[\-][0-9]{3}[\-][0-9]{4}" />
+    </div>
+    <br/>
+    <div class="FormFields">
+      <label>Address</label>
+      <input type="text" name="entry.434957240" required placeholder="Address" />
+    </div>
+    <br/>
+    <div class="FormFields">
+      <label>Short summary of how you would like to transform your outdoor environment</label>
+      <textarea name="entry.1668285027" required placeholder="Your Vision..."></textarea>
+    </div>
+    <br/>
+    <button type="submit" style="justify-self: center; width: min-content;" style="font-size: 18px;">Submit</button>
+  </form>
 </div>
-
+<div class="w3-content w3-container w3-padding-64" id="contactInfo">
+  <h3 class="w3-center">OUR INFO</h3>
+  <h4>Phone Number: (587)-889-0863</h4>
+  <h4>Email: <a href="mailto:landscaping@gardenglow.info">landscaping@gardenglow.info</a></h4>
+  <br/>
+</div>
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
