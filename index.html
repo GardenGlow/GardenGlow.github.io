@@ -4,7 +4,9 @@
 <title>Garden Glow Landscaping</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Transform Your Outdoor Space with Garden Glow Landscaping services. Elevate the beauty and value of your property with our full suite of landscaping services.">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon_package_v0.16/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="144x144" href="/favicon_package_v0.16/favicon-144x144.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon_package_v0.16/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon_package_v0.16/favicon-16x16.png">
 <link rel="manifest" href="/favicon_package_v0.16/site.webmanifest">
@@ -16,145 +18,145 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6,p,li,div {font-family: "Lato", sans-serif; color: black;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
-  scroll-behavior: smooth;
-  
-}
-#flexItems {
-  color:white;
-}
-.myNavbar {
-    background-color: rgba(251, 251, 251, 0.41);
-}
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url("/sources/Images/Landscaping_Background.jpeg");
-  min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/sources/Images/Lawn Mower.jpg");
-  min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("/sources/Images/Laying_Sod.jpg");
-  min-height: 400px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-#specialize {
-  font-size: 20pt;
-}
-.listOfJobs li {
-  padding: 20px;
-  padding-left: 40px;
-}
-.contentDiv {
-  position: absolute;
-    top: 200%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.FormFields {
-  display: grid;
-  grid-template-columns: 50% 2% 50%;
-}
-.FormFields label {
-  text-align: right;
-}
-.FormFields input, .FormFields textarea {
-  grid-column: 3;
-}
-label {
-  font-size: 18px;
-}
-#freeQuote {
-    align-items: center;
-    justify-content: center;
-    display:grid;
-}
-.freeQuoteButton {
-  align-items: center;
-  font-size: 22px;
-  justify-content: center;
-}
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1200px) {
+  body,h1,h2,h3,h4,h5,h6,p,li,div {font-family: "Lato", sans-serif; color: black;}
+  body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+    scroll-behavior: smooth;
+    
+  }
+  #flexItems {
+    color:white;
+  }
+  .myNavbar {
+      background-color: rgba(251, 251, 251, 0.41);
+  }
+  /* Create a Parallax Effect */
   .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* First image (Logo. Full height) */
+  .bgimg-1 {
+    background-image: url("/sources/Images/Landscaping_Background.jpeg");
+    min-height: 100%;
+  }
+
+  /* Second image (Portfolio) */
+  .bgimg-2 {
+    background-image: url("/sources/Images/Lawn Mower.jpg");
     min-height: 400px;
   }
+
+  /* Third image (Contact) */
+  .bgimg-3 {
+    background-image: url("/sources/Images/Laying_Sod.jpg");
+    min-height: 400px;
+  }
+
+  .w3-wide {letter-spacing: 10px;}
+  .w3-hover-opacity {cursor: pointer;}
+
+  #specialize {
+    font-size: 20pt;
+  }
   .listOfJobs li {
-    font-size: 22px;
+    padding: 20px;
+    padding-left: 40px;
   }
-  .arrow {
-    display: none;
-  }
-}
-@media only screen and (min-device-width: 1200px) {
-  .listOfJobs {
-    display: grid; 
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33%;
-  }
-  #jobListItem1, #jobListItem2, #jobListItem3 {
-    grid-row: 1;
-  }
-  #jobListItem4, #jobListItem5, #jobListItem6 {
-    grid-row: 2;
-  }
-  #jobListItem7, #jobListItem8, #jobListItem9 {
-    grid-row: 3;
-  }
-  #jobListItem1, #jobListItem4, #jobListItem7 {
-    grid-column: 1;
-    font-size: 26px;
-    white-space: nowrap;
-  }
-  #jobListItem2, #jobListItem5, #jobListItem8 {
-    grid-column: 2;
-    font-size: 26px;
-    white-space: nowrap;
-  }
-  #jobListItem3, #jobListItem6, #jobListItem9 {
-    grid-column: 3;
-    font-size: 26px;
-    white-space: nowrap;
-  }
-  @keyframes bouncing {
-  0% {bottom: 0;}
-  50% {bottom: 20px;}
-  100% {bottom: 0;}
-  }
-  .arrow {
-    animation: bouncing 2s infinite ease-in-out;
-    bottom: 80;
-    display: block;
-    height: 20px;
-    left: 50%;
-    margin-left: -15px;
+  .contentDiv {
     position: absolute;
-    width: 20px;
+      top: 200%;
+      left: 50%;
+      transform: translate(-50%, -50%);
   }
-}
+
+  .FormFields {
+    display: grid;
+    grid-template-columns: 50% 2% 50%;
+  }
+  .FormFields label {
+    text-align: right;
+  }
+  .FormFields input, .FormFields textarea {
+    grid-column: 3;
+  }
+  label {
+    font-size: 18px;
+  }
+  #freeQuote {
+      align-items: center;
+      justify-content: center;
+      display:grid;
+  }
+  .freeQuoteButton {
+    align-items: center;
+    font-size: 22px;
+    justify-content: center;
+  }
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1200px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: scroll;
+      min-height: 400px;
+    }
+    .listOfJobs li {
+      font-size: 22px;
+    }
+    .arrow {
+      display: none;
+    }
+  }
+  @media only screen and (min-device-width: 1200px) {
+    .listOfJobs {
+      display: grid; 
+      grid-template-columns: 33% 33% 33%;
+      grid-template-rows: 33% 33% 33%;
+    }
+    #jobListItem1, #jobListItem2, #jobListItem3 {
+      grid-row: 1;
+    }
+    #jobListItem4, #jobListItem5, #jobListItem6 {
+      grid-row: 2;
+    }
+    #jobListItem7, #jobListItem8, #jobListItem9 {
+      grid-row: 3;
+    }
+    #jobListItem1, #jobListItem4, #jobListItem7 {
+      grid-column: 1;
+      font-size: 26px;
+      white-space: nowrap;
+    }
+    #jobListItem2, #jobListItem5, #jobListItem8 {
+      grid-column: 2;
+      font-size: 26px;
+      white-space: nowrap;
+    }
+    #jobListItem3, #jobListItem6, #jobListItem9 {
+      grid-column: 3;
+      font-size: 26px;
+      white-space: nowrap;
+    }
+    @keyframes bouncing {
+    0% {bottom: 0;}
+    50% {bottom: 20px;}
+    100% {bottom: 0;}
+    }
+    .arrow {
+      animation: bouncing 2s infinite ease-in-out;
+      bottom: 80;
+      display: block;
+      height: 20px;
+      left: 50%;
+      margin-left: -15px;
+      position: absolute;
+      width: 20px;
+    }
+  }
 
 </style>
 </head>
@@ -183,7 +185,7 @@ label {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="MainLogo"><img src="../sources/Images/Logo_Image_Upscaled_RemovedBackground.png" height="200px" width="238px"></span>
+    <span class="MainLogo"><img src="../sources/Images/Logo_Image_Upscaled_RemovedBackground.png" height="200px" width="238px" alt="Garden Glow Landscaping Logo"></span>
     <div class="contentDiv">
       <img class="arrow" src="/sources/Images/arrow-234.png" />
     </div>
