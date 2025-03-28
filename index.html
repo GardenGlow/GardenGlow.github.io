@@ -18,151 +18,169 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-      <style>
-        body,h1,h2,h3,h4,h5,h6,p,li,div {font-family: "Lato", sans-serif; color: black;}
-        body, html {
-          height: 100%;
-          color: #777;
-          line-height: 1.8;
-          scroll-behavior: smooth;
-          
-        }
-        #flexItems {
-          color:white;
-        }
-        .myNavbar {
-            background-color: rgba(251, 251, 251, 0.41);
-        }
-        /* Create a Parallax Effect */
+    <style>
+      body,h1,h2,h3,h4,h5,h6,p,li,div {font-family: "Lato", sans-serif; color: black;}
+      body, html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+        scroll-behavior: smooth;
+        
+      }
+      #flexItems {
+        color:white;
+      }
+      .myNavbar {
+          background-color: rgba(251, 251, 251, 0.41);
+      }
+      /* Create a Parallax Effect */
+      .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      /* First image (Logo. Full height) */
+      .bgimg-1 {
+        background-image: url("/sources/Images/Landscaping_Background.jpeg");
+        min-height: 100%;
+      }
+
+      /* Second image (Portfolio) */
+      .bgimg-2 {
+        background-image: url("/sources/Images/Lawn Mower.jpg");
+        min-height: 400px;
+      }
+
+      /* Third image (Contact) */
+      .bgimg-3 {
+        background-image: url("/sources/Images/Laying_Sod.jpg");
+        min-height: 400px;
+      }
+
+      .w3-wide {letter-spacing: 10px;}
+      .w3-hover-opacity {cursor: pointer;}
+
+      #specialize {
+        font-size: 20pt;
+      }
+      .listOfJobs li {
+        padding: 20px;
+        padding-left: 40px;
+      }
+      .contentDiv {
+        position: absolute;
+          top: 200%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
+
+      .FormFields {
+        display: grid;
+        grid-template-columns: 50% 2% 50%;
+      }
+      .FormFields label {
+        text-align: right;
+      }
+      .FormFields input, .FormFields textarea {
+        grid-column: 3;
+      }
+      label {
+        font-size: 18px;
+      }
+      #freeQuote {
+          align-items: center;
+          justify-content: center;
+          display:grid;
+      }
+      .freeQuoteButton {
+        align-items: center;
+        font-size: 22px;
+        justify-content: center;
+      }
+      /* Turn off parallax scrolling for tablets and phones */
+      @media only screen and (max-device-width: 1200px) {
         .bgimg-1, .bgimg-2, .bgimg-3 {
-          background-attachment: fixed;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
-
-        /* First image (Logo. Full height) */
-        .bgimg-1 {
-          background-image: url("/sources/Images/Landscaping_Background.jpeg");
-          min-height: 100%;
-        }
-
-        /* Second image (Portfolio) */
-        .bgimg-2 {
-          background-image: url("/sources/Images/Lawn Mower.jpg");
+          background-attachment: scroll;
           min-height: 400px;
-        }
-
-        /* Third image (Contact) */
-        .bgimg-3 {
-          background-image: url("/sources/Images/Laying_Sod.jpg");
-          min-height: 400px;
-        }
-
-        .w3-wide {letter-spacing: 10px;}
-        .w3-hover-opacity {cursor: pointer;}
-
-        #specialize {
-          font-size: 20pt;
         }
         .listOfJobs li {
-          padding: 20px;
-          padding-left: 40px;
-        }
-        .contentDiv {
-          position: absolute;
-            top: 200%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .FormFields {
-          display: grid;
-          grid-template-columns: 50% 2% 50%;
-        }
-        .FormFields label {
-          text-align: right;
-        }
-        .FormFields input, .FormFields textarea {
-          grid-column: 3;
-        }
-        label {
-          font-size: 18px;
-        }
-        #freeQuote {
-            align-items: center;
-            justify-content: center;
-            display:grid;
-        }
-        .freeQuoteButton {
-          align-items: center;
           font-size: 22px;
-          justify-content: center;
         }
-        /* Turn off parallax scrolling for tablets and phones */
-        @media only screen and (max-device-width: 1200px) {
-          .bgimg-1, .bgimg-2, .bgimg-3 {
-            background-attachment: scroll;
-            min-height: 400px;
-          }
-          .listOfJobs li {
-            font-size: 22px;
-          }
-          .arrow {
-            display: none;
-          }
+        .arrow {
+          display: none;
         }
-        @media only screen and (min-device-width: 1200px) {
-          .listOfJobs {
-            display: grid; 
-            grid-template-columns: 33% 33% 33%;
-            grid-template-rows: 33% 33% 33%;
-          }
-          #jobListItem1, #jobListItem2, #jobListItem3 {
-            grid-row: 1;
-          }
-          #jobListItem4, #jobListItem5, #jobListItem6 {
-            grid-row: 2;
-          }
-          #jobListItem7, #jobListItem8, #jobListItem9 {
-            grid-row: 3;
-          }
-          #jobListItem1, #jobListItem4, #jobListItem7 {
-            grid-column: 1;
-            font-size: 26px;
-            white-space: nowrap;
-          }
-          #jobListItem2, #jobListItem5, #jobListItem8 {
-            grid-column: 2;
-            font-size: 26px;
-            white-space: nowrap;
-          }
-          #jobListItem3, #jobListItem6, #jobListItem9 {
-            grid-column: 3;
-            font-size: 26px;
-            white-space: nowrap;
-          }
-          @keyframes bouncing {
-          0% {bottom: 0;}
-          50% {bottom: 20px;}
-          100% {bottom: 0;}
-          }
-          .arrow {
-            animation: bouncing 2s infinite ease-in-out;
-            bottom: 80;
-            display: block;
-            height: 20px;
-            left: 50%;
-            margin-left: -15px;
-            position: absolute;
-            width: 20px;
-          }
+      }
+      @media only screen and (min-device-width: 1200px) {
+        .listOfJobs {
+          display: grid; 
+          grid-template-columns: 33% 33% 33%;
+          grid-template-rows: 33% 33% 33%;
         }
+        #jobListItem1, #jobListItem2, #jobListItem3 {
+          grid-row: 1;
+        }
+        #jobListItem4, #jobListItem5, #jobListItem6 {
+          grid-row: 2;
+        }
+        #jobListItem7, #jobListItem8, #jobListItem9 {
+          grid-row: 3;
+        }
+        #jobListItem1, #jobListItem4, #jobListItem7 {
+          grid-column: 1;
+          font-size: 26px;
+          white-space: nowrap;
+        }
+        #jobListItem2, #jobListItem5, #jobListItem8 {
+          grid-column: 2;
+          font-size: 26px;
+          white-space: nowrap;
+        }
+        #jobListItem3, #jobListItem6, #jobListItem9 {
+          grid-column: 3;
+          font-size: 26px;
+          white-space: nowrap;
+        }
+        @keyframes bouncing {
+        0% {bottom: 0;}
+        50% {bottom: 20px;}
+        100% {bottom: 0;}
+        }
+        .arrow {
+          animation: bouncing 2s infinite ease-in-out;
+          bottom: 80;
+          display: block;
+          height: 20px;
+          left: 50%;
+          margin-left: -15px;
+          position: absolute;
+          width: 20px;
+        }
+      }
 
-      </style>
-    </head>
+    </style>
+  </head>
+
+  <script>
+    let submitted = false;
+  
+    function onSubmit(token) {
+      submitted = true;
+      document.getElementById("contact-form").submit();
+    }
+  
+    function formSubmitted() {
+      if (submitted) {
+        // Give Google a moment to process before redirecting
+        setTimeout(() => {
+          window.location.href = "submition.html";
+        }, 500);
+      }
+    }
+  </script>
+    
   <body>
-
   <!-- Navbar (sit on top) -->
   <div class="w3-top">
     <div class="w3-bar w3-white" id="myNavbar">
@@ -338,9 +356,12 @@
     <h2 class="w3-center">GET IN TOUCH</h2>
     <p class="w3-center" style="font-size: 20px;"><em>Tell us what work you need to have done and we'll get in contact with you as soon as possible!</em></p>
     <br/>
-    <script type="text/javascript">var submitted=false</script>
-    <iframe name="hiddenConfirm" id="hiddenConfirm" style="display:none;" onload="if(submitted){window.location='submition.html';}"></iframe>
-    <form action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSdqgq7ExvVKkUaWbeQ89uxQjkFg4O-6opT6N7QKz3T7fAVd0g/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true" style="display:grid">
+  
+    <!-- Hidden iframe for redirect handling -->
+    <iframe name="hiddenConfirm" style="display: none;" onload="formSubmitted()"></iframe>
+  
+    <!-- Contact Form -->
+    <form id="contact-form" action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSdqgq7ExvVKkUaWbeQ89uxQjkFg4O-6opT6N7QKz3T7fAVd0g/formResponse" method="post" target="hiddenConfirm" style="display:grid">
       <div class="FormFields">
         <label>Full Name</label>
         <input type="text" name="entry.1289879338" required placeholder="Full Name" />
@@ -366,10 +387,13 @@
         <textarea name="entry.1668285027" required placeholder="Your Vision..."></textarea>
       </div>
       <br/>
+  
+      <!-- Honeypot Field -->
       <div style="display: none;">
         <input type="text" name="entry.1305036616" placeholder="Leave this field blank">
       </div>
-      <!-- reCAPTCHA Submit -->
+  
+      <!-- reCAPTCHA Submit Button -->
       <button
         class="g-recaptcha"
         data-sitekey="6LeBJAMrAAAAADbaUQNDDOYCUvZz3P7tVpPyvyjN"
@@ -382,6 +406,7 @@
       </button>
     </form>
   </div>
+  
   <div class="w3-content w3-container w3-padding-64" id="contactInfo">
     <h3 class="w3-center">OUR INFO</h3>
     <h4>Phone Number: (587)-889-0863</h4>
