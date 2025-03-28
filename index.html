@@ -161,24 +161,6 @@
 
     </style>
   </head>
-
-  <script>
-    let submitted = false;
-  
-    function onSubmit(token) {
-      submitted = true;
-      document.getElementById("contact-form").submit();
-    }
-  
-    function formSubmitted() {
-      if (submitted) {
-        // Give Google a moment to process before redirecting
-        setTimeout(() => {
-          window.location.href = "submition.html";
-        }, 500);
-      }
-    }
-  </script>
     
   <body>
   <!-- Navbar (sit on top) -->
@@ -473,7 +455,7 @@
     
         setTimeout(() => {
           window.location.href = "submition.html";
-        }, 1500); // Delay ensures Google Form receives submission
+        }, 500); // Delay ensures Google Form receives submission
       }
     </script>
   </body>
